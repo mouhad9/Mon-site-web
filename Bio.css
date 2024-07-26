@@ -1,0 +1,101 @@
+body {
+    background-color: black;
+    font-family: "Fredoka", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-color: rgb(141, 217, 227);
+    }
+    25% {
+        border-color: rgb(227, 141, 217);
+    }
+    50% {
+        border-color: rgb(217, 227, 141);
+    }
+    75% {
+        border-color: rgb(141, 227, 217);
+    }
+    100% {
+        border-color: rgb(141, 217, 227);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Bio {
+    border: solid 5px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 480px;
+    background-color: rgb(22, 93, 98);
+    animation: borderColorChange 5s linear infinite, fadeIn 2s ease-in;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.Bio:hover {
+    transform: scale(1.05);
+}
+
+.TitreBio, .DisplayName, .Coucou, .Bio1, .Bio2, .Bio3, .Bio4 {
+    animation: fadeIn 2s ease-in;
+}
+
+.TitreBio {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.DisplayName {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.Coucou {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.Bio1, .Bio2, .Bio3, .Bio4 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.Discord {
+    display: block;
+    margin: 20px auto 0;
+    width: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.Discord:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #fff;
+    background-image: linear-gradient(to right, #fff, rgba(0, 0, 0, 0), #fff);
+}
